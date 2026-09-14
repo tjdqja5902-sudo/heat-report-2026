@@ -61,10 +61,11 @@
             font-size: 13px;
             color: #2c3e50;
             margin-bottom: 8px;
+            line-height: 1.6;
         }
-        .small-text {
-            font-size: 11px;
-            font-weight: normal;
+        .overview-bullet {
+            margin-left: 20px;
+            margin-bottom: 6px;
         }
         .section {
             margin-bottom: 40px;
@@ -116,16 +117,12 @@
             color: #4a7ba7;
             font-weight: 600;
         }
-        .highlight-red {
-            color: #c92a2a;
-            font-weight: 700;
-        }
         .highlight-blue {
             color: #2c5282;
             font-weight: 700;
         }
-        .highlight-subtitle {
-            color: #2c5282;
+        .highlight-red {
+            color: #c92a2a;
             font-weight: 700;
         }
         .insight-box {
@@ -284,6 +281,43 @@
         .special-notice p {
             margin-bottom: 6px;
         }
+        .management-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .management-card {
+            background: white;
+            border: 2px solid #2c5282;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        .management-card .stage {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 6px 6px 0 0;
+            margin: -20px -20px 16px -20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .management-card .item {
+            margin-bottom: 12px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .management-card .item-title {
+            color: #2c5282;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .management-card .item-detail {
+            color: #2c3e50;
+            margin-left: 16px;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -297,11 +331,17 @@
         <h2>📌 보고서 개요</h2>
         
         <h3>【 배경 】</h3>
-        <p>혹서기 점검은 매년 정기적으로 실시하고 있으나, <span class="highlight-red">2026년 폭염이 심화</span><span class="small-text">( 10년 평균 3°C 이상 상회, 35°C 이상 일수 15일로 2배 증가)</span>됨에 따라 강화하여 실시</p>
+        <div class="overview-bullet">
+            <p>• 혹서기 점검은 매년 정기적으로 실시하고 있으나, <span class="highlight-blue">2026년의 폭염 발생이 심화됨에 따른 대응을 위해 혹서기 안전패트롤로 강화하여 실시</span></p>
+        </div>
+        <div class="overview-bullet">
+            <p>• 7~8월의 평균기온이 과거 10년 평균대비 3°C 이상 상회 (기상청 발표 기준 7월 28.1°C, 8월 29.8°C)했으며, 최고기온 35°C 이상 일수가 15일로 2배 증가하여 <span class="highlight-blue">대응 강화의 필요성 입증</span></p>
+        </div>
 
         <h3>【 진행 개요 】</h3>
-        <p>• 혹서기 안전 패트롤: <span class="highlight-red">474건 시행 → 부적합사항 182건 도출 (100% 개선)</span></p>
-        <p>• 특별지원 포함 전체 <span class="highlight-subtitle">599건 추가 지원</span>, 대외점검 <span class="highlight-subtitle">144건 대응</span>, 온열질환 의심자 <span class="highlight-red">37명 발생하여 관련 모니터링 진행</span></p>
+        <div class="overview-bullet">
+            <p>• 운영1팀 기준 7월~8월 間 혹서기 안전 패트롤은 <span class="highlight-blue">474건 시행 결과 부적합사항 182건 도출 (100% 개선)</span>, 대외점검 144건 대응, 온열질환 의심자는 37명 발생하여 관련 모니터링 진행함</p>
+        </div>
     </div>
 
     <!-- SECTION 1 -->
@@ -317,19 +357,20 @@
                 <div class="kpi-card">
                     <div class="label">8월 패트롤</div>
                     <div class="value">246</div>
-                    <div class="unit">+18건 (+7.9%)</div>
+                    <div class="unit">+18건 <span class="highlight-red">(+7.9%)</span></div>
                 </div>
                 <div class="kpi-card">
-                    <div class="label">전체 지원</div>
+                    <div class="label">특별지원 포함</div>
                     <div class="value">599</div>
-                    <div class="unit">474건 + 125건 특별지원</div>
+                    <div class="unit">474건 + 125건</div>
                 </div>
             </div>
 
             <div class="special-notice">
                 <h4>📌 시사점: 점진적 대응 범위 확대 및 극한 폭염 대응 강화</h4>
-                <p><strong>▪ 7월 기본운영:</strong> 폭염 패트롤 228건 진행</p>
-                <p><strong>▪ 8월 강화운영:</strong> 지게차 집중 안전점검, 주말/야간 패트롤 추가로 246건 시행(+7.9%). 기본 패트롤 474건 외 지게차 운전원 안전교육, 야간순회 등 특별지원 125건 추가 지원하여 총 599건 대응</p>
+                <p><strong>▪ 7월 기본운영:</strong> 폭염 패트롤 중심으로 228건 진행</p>
+                <p><strong>▪ 8월 대폭 강화:</strong> Sub 사업장 반야외 특성에 맞춘 지게차 집중 안전점검 및 주말/야간 시간대 점검을 추가적으로 진행하여 폭염 패트롤 246건 시행 <span class="highlight-red">(+7.9%, +18건)</span>. 특별지원 포함 전체 지원은 599건으로 7월 대비 대폭 증가</p>
+                <p><strong>▪ 강화 배경:</strong> <span class="highlight-red"><strong>8월에 심화된 극한 폭염(35°C 이상 7일 연속)</strong></span> 대응을 위한 필수적인 강화 조치로, 기본 패트롤 474건 외 지게차 운전원 안전교육, 야간순회 등 125건 특별지원 추가</p>
             </div>
         </div>
     </div>
@@ -347,12 +388,12 @@
                 <div class="kpi-card">
                     <div class="label">개선완료</div>
                     <div class="value">100%</div>
-                    <div class="unit">전체 개선</div>
+                    <div class="unit"><span class="highlight-red">전체 개선</span></div>
                 </div>
                 <div class="kpi-card">
                     <div class="label">주요 본부</div>
                     <div class="value">O-NE</div>
-                    <div class="unit"><span class="highlight-red">89건 (48.9%)</span></div>
+                    <div class="unit"><span class="highlight-blue">89건 (48.9%)</span></div>
                 </div>
             </div>
 
@@ -376,7 +417,7 @@
                     <tbody>
                         <tr>
                             <td><strong>1</strong></td>
-                            <td><span class="highlight-red">체감온도 조치사항 미작성</span></td>
+                            <td><span class="highlight-red"><strong>체감온도 조치사항 미작성</strong></span></td>
                             <td><strong>64건</strong></td>
                             <td>33건</td>
                             <td>21건</td>
@@ -384,7 +425,7 @@
                         </tr>
                         <tr>
                             <td><strong>2</strong></td>
-                            <td><span class="highlight-red">개인보냉장구 관리 미흡</span></td>
+                            <td><strong>개인보냉장구 관리 미흡</strong></td>
                             <td><strong>31건</strong></td>
                             <td>7건</td>
                             <td>23건</td>
@@ -424,16 +465,16 @@
 
             <div class="special-notice">
                 <h4>📌 특이사항: O-NE본부 체감온도 관리 미흡</h4>
-                <p><strong>▪ 핵심 취약:</strong> 체감온도에 따른 조치사항 미작성(33건, 51.6%)에 집중. 택배 소팅센터의 반야외 작업환경 특성상 온습도 변화가 크나 기록·관리 체계 미흡</p>
-                <p><strong>▪ 구조적 문제:</strong> AED·휴게시설 등 안전 인프라 부족. 상·하차 및 분류 작업 중 실시간 온습도 모니터링 체계 미비로 응급 상황 대응 어려움</p>
-                <p><strong>▪ 대비 분석:</strong> FT 대형물류창고는 폐쇄 공간 저환기로 보냉장구(23건) 절대 필요. 더운반은 소규모로 전반적 자원 부족(16건)</p>
+                <p><strong>▪ 핵심 취약:</strong> 체감온도에 따른 조치사항 미작성(33건, 51.6%)에 집중. <span class="highlight-red"><strong>Sub 사업장의 작업환경 특성상 온습도 변화가 크나 기록·관리 체계 미흡</strong></span></p>
+                <p><strong>▪ 구조적 문제:</strong> 체감온도 저감을 위한 인프라 투자 미흡, 상·하차 및 분류 작업 중 <span class="highlight-red"><strong>실시간 온습도 모니터링 체계 미비</strong></span>로 대외점검 대응 미비 발생 위험</p>
+                <p><strong>▪ 대비 분석:</strong> O-NE본부 온습도 기록 여부 집중 현장 계도 및 혹서기 도입 전 사전 모니터링 강화 필요</p>
             </div>
         </div>
     </div>
 
     <!-- SECTION 3 -->
     <div class="section">
-        <div class="section-title">🔍 Section 3. 대외점검 비교 분석(2025 vs 2026)</div>
+        <div class="section-title">🔍 Section 3. 7~8월 대외점검 비교 분석(2025 vs 2026)</div>
         <div class="section-content">
             <div class="kpi-grid">
                 <div class="kpi-card">
@@ -448,7 +489,7 @@
                 </div>
                 <div class="kpi-card">
                     <div class="label">증가율</div>
-                    <div class="value">+80%</div>
+                    <div class="value"><span class="highlight-red">+80%</span></div>
                     <div class="unit">+64건</div>
                 </div>
             </div>
@@ -468,7 +509,7 @@
                         <tr>
                             <td><strong>남서울</strong></td>
                             <td>15건</td>
-                            <td><span class="highlight-red">53건</span></td>
+                            <td><span class="highlight-blue">53건</span></td>
                             <td>+38건</td>
                             <td><span class="badge badge-high">+253%</span></td>
                         </tr>
@@ -506,9 +547,9 @@
 
             <div class="special-notice">
                 <h4>📌 특이사항: 남서울 지역 2배 이상 증가</h4>
-                <p><strong>▪ 산업 변화:</strong> 강남·송파·강동 신규 물류센터 확대로 검사 대상 증가</p>
+                <p><strong>▪ 산업 변화:</strong> 경기남부 물류센터 확대로 대외점검 대상 증가</p>
                 <p><strong>▪ 정부 정책:</strong> 고용노동부 "2026 폭염 대비 안전점검" 공시(4월)로 수도권 우선 점검</p>
-                <p><strong>▪ 시사점:</strong> 경기권 집중 점검 추세로 2027년 300건 이상 예상</p>
+                <p><strong>▪ 시사점:</strong> 경기권 집중 점검 추세로 2026년 대비 2027년 점검 증가 예상</p>
             </div>
         </div>
     </div>
@@ -526,7 +567,7 @@
                 <div class="kpi-card">
                     <div class="label">8월</div>
                     <div class="value">21</div>
-                    <div class="unit">+5명 (+31.3%)</div>
+                    <div class="unit"><span class="highlight-red">+5명 (+31.3%)</span></div>
                 </div>
                 <div class="kpi-card">
                     <div class="label">기온 연관도</div>
@@ -580,9 +621,9 @@
 
             <div class="special-notice">
                 <h4>📌 특이사항: 본부별 환경 특성에 따른 의심자 분포</h4>
-                <p><strong>▪ O-NE본부 (23명, 62.2%):</strong> 택배 소팅센터의 반야외 특성상 태양 직사광선 노출이 많고, 상·하차 및 분류 작업 중 물리적 활동량 높음. 신규 투입자 비율 높아 적응 기간 온열질환 위험 증가. 8월 13명 발생(+30%)</p>
-                <p><strong>▪ FT본부 (14명, 37.8%):</strong> 대형물류창고의 폐쇄 공간에서 환기 부족, 냉방이 미비한 구역에 집중. 8월 8명 발생(+33%). 증가율 더 높으나 절대수는 O-NE 우위. 장시간 반복 작업으로 누적 피로도 높음</p>
-                <p><strong>▪ 공통 원인:</strong> 신규 투입자(37.8%)의 기저질환 미파악, 극한 폭염 구간(8월 초중반 35°C 이상 7일) 집중 발생. 기온 상승이 의심자 발생에 직결됨(상관계수 0.89)</p>
+                <p><strong>▪ O-NE본부 (23명, 62.2%):</strong> Sub 사업장의 작업환경 특성상 <span class="highlight-red"><strong>태양 직사광선 노출이 많고 상·하차 및 분류 작업 중 물리적 활동량 높음</strong></span>. 신규 투입자 비율 높아 적응 기간 온열질환 위험 증가. 8월 13명 발생(+30%)</p>
+                <p><strong>▪ FT본부 (14명, 37.8%):</strong> 대형물류창고의 폐쇄 공간에서 <span class="highlight-red"><strong>환기 부족, 냉방이 미비한 구역</strong></span>에 집중. 8월 8명 발생(+33%). 장시간 반복 작업으로 누적 피로도 높음</p>
+                <p><strong>▪ 공통 원인:</strong> <span class="highlight-red"><strong>신규 투입자(37.8%)의 기저질환 미파악</strong></span>, 극한 폭염 구간(8월 초중반 35°C 이상 7일) 집중 발생. 기온 상승이 의심자 발생에 직결됨(상관계수 0.89)</p>
             </div>
         </div>
     </div>
@@ -613,28 +654,50 @@
 
             <h3 style="font-size: 15px; font-weight: 700; color: #1a365d; margin: 30px 0 16px 0; padding-bottom: 8px; border-bottom: 2px solid #2c5282;">📅 2027년 혹서기 안전패트롤 관리 방안</h3>
 
-            <div style="background: white; border-left: 4px solid #4a7ba7; padding: 18px; border-radius: 6px; margin-top: 20px; font-size: 13px; line-height: 1.6; color: #2c3e50;">
-                <strong style="color: #2c5282; font-size: 14px;">【 1단계 】사전 대비 (3월~5월)</strong><br>
-                <strong>• 본부별 보냉장구 구비를 위한 예산 반영</strong><br>
-                &nbsp;&nbsp;각 사업장별 필요 수량 조사 및 안전팀 예산 검토<br><br>
-                <strong>• 온습도계, 응급키트 전수 확인</strong><br>
-                &nbsp;&nbsp;O-NE 본부 온습도 기록 여부 집중 현장계도<br><br>
-                <strong>• 본부별 휴게시간 Time Table 작성 및 검토</strong><br>
-                &nbsp;&nbsp;기온별 휴게 기준 사전 협의, 협력사 공지<br><br>
+            <div class="management-grid">
+                <div class="management-card">
+                    <div class="stage">【 1단계 】사전 대비 (3월~5월)</div>
+                    <div class="item">
+                        <div class="item-title">• 본부별 보냉장구 구비를 위한 예산 반영</div>
+                        <div class="item-detail">각 사업장별 필요 수량 조사 및 안전팀 예산 검토</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">• 온습도계, 응급키트 전수 확인</div>
+                        <div class="item-detail">O-NE 본부 온습도 기록 여부 집중 현장계도</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">• 본부별 휴게시간 Time Table 작성 및 검토</div>
+                        <div class="item-detail">기온별 휴게 기준 사전 협의, 협력사 공지</div>
+                    </div>
+                </div>
 
-                <strong style="color: #2c5282; font-size: 14px;">【 2단계 】집중 관리 (6월~8월)</strong><br>
-                <strong>• 기온 예보 기반 일일 모니터링 체계 운영</strong><br>
-                &nbsp;&nbsp;협력사 소통 카톡방 활용, 32°C 이상 주의 알림 자동 발송<br><br>
-                <strong>• 휴게시간 준수 모니터링 실시</strong><br>
-                &nbsp;&nbsp;CCTV 활용하여 휴게 미준수 현황 주 1회 점검<br><br>
-                <strong>• 기온별 휴게시간, 조치사항 기록일지 준수여부 확인</strong><br>
-                &nbsp;&nbsp;32°C 이상 시 추가 조치사항 부여, 35°C 이상 시 휴게시간 추가 부여 등<br><br>
+                <div class="management-card">
+                    <div class="stage">【 2단계 】집중 관리 (6월~8월)</div>
+                    <div class="item">
+                        <div class="item-title">• 기온 예보 기반 일일 모니터링 체계 운영</div>
+                        <div class="item-detail">협력사 소통 카톡방 활용, 32°C 이상 주의 알림 자동 발송</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">• 휴게시간 준수 모니터링 실시</div>
+                        <div class="item-detail">CCTV 활용하여 점검 시 휴게 미준수 현황 파악 철저</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">• 기온별 휴게시간, 조치사항 기록일지 준수여부 확인</div>
+                        <div class="item-detail">32°C 이상 시 추가 조치사항 부여, 35°C 이상 시 휴게시간 추가 부여 등</div>
+                    </div>
+                </div>
 
-                <strong style="color: #2c5282; font-size: 14px;">【 3단계 】평가·개선 방향 수립 (9월)</strong><br>
-                <strong>• 대외점검 결과 즉시 반영 및 재점검</strong><br>
-                &nbsp;&nbsp;지적 사항별 개선 일정 수립, 재점검 완료 확인<br><br>
-                <strong>• 차년도 정책 수립을 위한 데이터 통합 평가</strong><br>
-                &nbsp;&nbsp;월별 부적합·온열질환 추세 분석, 구조적 개선안 도출<br>
+                <div class="management-card">
+                    <div class="stage">【 3단계 】평가·개선 방향 수립 (9월)</div>
+                    <div class="item">
+                        <div class="item-title">• 대외점검 결과 즉시 반영 및 재점검</div>
+                        <div class="item-detail">지적 사항별 개선 일정 수립, 재점검 완료 확인</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">• 차년도 정책 수립을 위한 데이터 통합 평가</div>
+                        <div class="item-detail">월별 부적합·온열질환 추세 분석, 구조적 개선안 도출</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -691,7 +754,8 @@
                 },
                 legend: {
                     show: true,
-                    right: '20px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
                     top: '20px',
                     textStyle: { fontSize: 11, color: '#1a365d' },
                     backgroundColor: 'rgba(255,255,255,0.9)',
